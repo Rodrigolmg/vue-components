@@ -11,3 +11,6 @@
         components: {'app-contador': ContadorComp }
     }
 </script>
+
+<style>
+</style>

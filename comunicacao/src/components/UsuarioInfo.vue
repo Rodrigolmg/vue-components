@@ -2,13 +2,27 @@
     <div class="componente">
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
-        <p>Nome do Usuário: <strong>{{ name }}</strong></p>
+        <p>Nome do Usuário: <strong>{{ reverseName() }}</strong></p>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['name']
+    props: {
+        name: {
+            type: String,
+            // required: true,
+            // default: 'Anônimo'
+            default: function() {
+                return Array(10).fill('RoR').join('')
+            }
+        }
+    },
+    methods: {
+        reverseName(){
+            return this.name.split('').reverse().join('')
+        }
+    }
 }
 </script>
 

@@ -9,7 +9,7 @@
         <div class="componentes">
             <app-usuario-info :name="name" @nameChanged="name = $event" 
                 :resetFn="resetName" :age="age"/>
-            <app-usuario-editar :age="age" @ageChanged="age = $event"/>
+            <app-usuario-editar :age="age" />
         </div>
     </div>
 </template>

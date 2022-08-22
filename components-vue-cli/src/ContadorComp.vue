@@ -1,8 +1,8 @@
 <template>
     <div class="contador">
         <span>{{ counter }}</span>
-        <button>+</button>
-        <button>-</button>
+        <button @click="sum">+</button>
+        <button @click="sub">-</button>
         
     </div>
 </template>
@@ -19,7 +19,7 @@
                 this.counter++
             },
             sub(){
-                this.counter--
+                if(this.counter > 0) this.counter--
             }
         }
     }

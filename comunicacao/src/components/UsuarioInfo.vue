@@ -4,6 +4,7 @@
         <p>Vários detalhes...</p>
         <p>Nome do Usuário: <strong>{{ reverseName() }}</strong></p>
         <button @click="resetName">Reiniciar nome</button>
+        <button @click="resetFn">Reiniciar nome (callback)</button>
     </div>
 </template>
 
@@ -17,7 +18,8 @@ export default {
             default: function() {
                 return Array(10).fill('RoR').join('')
             }
-        }
+        },
+        resetFn: Function
     },
     methods: {
         reverseName(){

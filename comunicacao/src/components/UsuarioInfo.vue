@@ -34,7 +34,7 @@ export default {
             this.$emit('nameChanged', this.name)
         },
         created(){
-            bus.$on('ageChanged', age => {
+            bus.whenAgeChanged(age => {
                 this.age = age
             })
         }

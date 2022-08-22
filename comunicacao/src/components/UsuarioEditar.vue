@@ -3,7 +3,7 @@
         <h2>Alterar os Dados de Usuário</h2>
         <p>Edite as informações</p>
         <p>Idade do usuário: <strong>{{ age }}</strong></p>
-        <button @click="changeAge">Alterar idade</button>
+        <button @click="changingAge">Alterar idade</button>
     </div>
 </template>
 
@@ -15,9 +15,9 @@
             age: Number
         },
         methods: {
-            changeAge(){
-                this.age = 33
-                bus.$emit('ageChanged', this.age)
+            changingAge(){
+                this.age += 1
+                bus.changeAge(this.age)
             }
         }
     }

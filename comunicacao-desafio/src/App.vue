@@ -22,7 +22,7 @@ export default {
                 { id: 5, nome: 'Lia', idade: 28 }
             ]
         }
-    }
+    },
 }
 </script>
 

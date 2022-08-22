@@ -10,12 +10,21 @@
 </template>
 
 <script>
+import bus from '@/bus'
+
 export default {
-    data() {
+   data() {
         return {
             usuario: null
         }
+    },
+    created(){
+        
+        bus.getUser(user => this.usuario = user)
+        
+        
     }
+    
 }
 </script>
 

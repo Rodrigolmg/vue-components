@@ -3,6 +3,7 @@
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
         <p>Nome do Usuário: <strong>{{ reverseName() }}</strong></p>
+        <p>Idade do usuário: <strong>{{ age }}</strong></p>
         <button @click="resetName">Reiniciar nome</button>
         <button @click="resetFn">Reiniciar nome (callback)</button>
     </div>
@@ -19,7 +20,8 @@ export default {
                 return Array(10).fill('RoR').join('')
             }
         },
-        resetFn: Function
+        resetFn: Function,
+        age: Number
     },
     methods: {
         reverseName(){
